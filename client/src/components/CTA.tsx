@@ -1,5 +1,4 @@
 import { ArrowRightIcon } from 'lucide-react';
-import { GhostButton } from './Buttons';
 import { motion } from 'framer-motion';
 
 export default function CTA() {

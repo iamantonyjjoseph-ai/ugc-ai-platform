@@ -86,20 +86,19 @@ const navigate = useNavigate();
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}
                             >
-                                <a href="/" className="w-full sm:w-auto">
-                                    <PrimaryButton  onClick={() => {
+                                <PrimaryButton
+                                onClick={() => {
                                 if (isSignedIn) {
-                                 navigate("/my-generations");
+                                navigate("/my-generations");
                                 } else {
-                                 navigate("/generate");
+                                navigate("/generate");
                                 }
                                 }}
+                               className="max-sm:w-full py-3 px-7"
                             >
-                                {isSignedIn ? "My Generations" : "Sign In"} className="max-sm:w-full py-3 px-7">
-                                Start generating — it's free
-                                <ArrowRightIcon className="size-4" />
-                                </PrimaryButton>
-                                </a>
+                            {isSignedIn ? "My Generations" : "Start generating — it's free"}
+                            <ArrowRightIcon className="size-4" />
+                            </PrimaryButton>
                                 
                             </motion.div>
 

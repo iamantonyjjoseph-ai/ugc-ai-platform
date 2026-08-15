@@ -6,7 +6,7 @@ import {
   SparkleIcon,
   XIcon,
 } from "lucide-react";
-import { GhostButton, PrimaryButton } from "./Buttons";
+import { PrimaryButton } from "./Buttons";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router-dom";

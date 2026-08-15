@@ -43,6 +43,6 @@ app.use("/api/user", userRouter);
 app.use("/api/project", projectRouter);
 
 Sentry.setupExpressErrorHandler(app);
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server is running on port ${PORT}`);
 });

@@ -10,7 +10,7 @@ import {
   Share2Icon,
   Trash2Icon,
 } from "lucide-react";
-import { PrimaryButton } from "./Buttons";
+import { GhostButton, PrimaryButton } from "./Buttons";
 import { useAuth } from "@clerk/clerk-react";
 import api from "../configs/axios";
 import toast from "react-hot-toast";

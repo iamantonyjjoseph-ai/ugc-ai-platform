@@ -1,9 +1,13 @@
 import { ArrowRightIcon, PlayIcon, ZapIcon, CheckIcon } from 'lucide-react';
 import { PrimaryButton, GhostButton } from './Buttons';
 import { motion } from 'framer-motion';
+import { useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
-
+const { isSignedIn } = useUser();
+const navigate = useNavigate();
+    
     const trustedUserImages = [
         'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=50',
         'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=50',
@@ -83,13 +87,20 @@ export default function Hero() {
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}
                             >
                                 <a href="/" className="w-full sm:w-auto">
-                                    <PrimaryButton className="max-sm:w-full py-3 px-7">
-                                        Start generating — it's free
-                                        <ArrowRightIcon className="size-4" />
-                                    </PrimaryButton>
+                                    <PrimaryButton  onClick={() => {
+                                if (isSignedIn) {
+                                 navigate("/my-generations");
+                                } else {
+                                 navigate("/generate");
+                                }
+                                }}
+                            >
+                                {isSignedIn ? "My Generations" : "Sign In"} className="max-sm:w-full py-3 px-7">
+                                Start generating — it's free
+                                <ArrowRightIcon className="size-4" />
+                                </PrimaryButton>
                                 </a>
-
-                               
+                                
                             </motion.div>
 
                             <motion.div className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"

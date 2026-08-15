@@ -8,7 +8,7 @@ import {
   VideoIcon,
 } from "lucide-react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { PrimaryButton } from "../components/Buttons";
+import { GhostButton, PrimaryButton } from "../components/Buttons";
 import { useAuth, useUser } from "@clerk/clerk-react";
 import api from "../configs/axios";
 import toast from "react-hot-toast";

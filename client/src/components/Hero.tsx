@@ -89,10 +89,7 @@ export default function Hero() {
                                     </PrimaryButton>
                                 </a>
 
-                                <GhostButton className="max-sm:w-full max-sm:justify-center py-3 px-5">
-                                    <PlayIcon className="size-4" />
-                                    Watch demo
-                                </GhostButton>
+                               
                             </motion.div>
 
                             <motion.div className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"
